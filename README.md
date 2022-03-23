@@ -20,7 +20,6 @@
 	light_services/rule_generation_{xxx}.py: generate rules for seen dataset. Since the number of input states for each DQN is small, there is no need to refine rules. (including: light_services/sample_enumerate_abstraction_pedagogical_ing_{xxx}.py and light_services/tree_ing_{xxx}.py)
 
 	evaluate rules:
-
 		- light_services/logicalRuleEvaluation_{xxx}.py: calculate replayMemory and total rewards of rules
 		- light_services/pedagogicalRuleEvaluation_{xxx}.py: refine replayMemory and total rewards of DQNs
 		- light_services/draw_pedaExplainer.py: compare replayMemory and total rewards of rules and DQNs

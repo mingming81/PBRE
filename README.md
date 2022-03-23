@@ -1,8 +1,8 @@
-1. PBRE to extract rules for iris, Wisconsin breast cancer, sonar, German credit, ionosphere, hear disease datasets contains the following the files:
+1. PBRE extracts rules for iris, Wisconsin breast cancer, sonar, German credit, ionosphere, hear disease datasets as shown in the following the files:
 
 	v3/{xxx}_data_model.py: train the model for each dataset
 
-	{xxx}/rule_generation_{xxx}.py: generate rules for seen dataset including  "Generate instance rules"+"Generalize instance rules"+"Combine rules"  (including: {xxx}/sample_enumerate_abstraction_pedagogical_ing_{xxx}.py and {xxx}/tree_ing_{xxx}.py)
+	{xxx}/rule_generation_{xxx}.py: generate rules for seen dataset containing  "Generate instance rules"+"Generalize instance rules"+"Combine rules"  (including 		files: {xxx}/sample_enumerate_abstraction_pedagogical_ing_{xxx}.py and {xxx}/tree_ing_{xxx}.py)
 
 	{xxx}/logicalRuleEvaluation_{xxx}.py: generate rules for seen dataset including  Refine rules":
 
@@ -11,17 +11,17 @@
 		- execute cel "Check" to load "{xxx}_not_signigicant_F.npy" and check the accuracy on test(unseen) dataset or train(seen) dataset.
 
 
-2. RxNCMto extract rules for iris, Wisconsin breast cancer, sonar, German credit, ionosphere, hear disease datasets contains the following the files:
+2. RxNCM extracts rules for iris, Wisconsin breast cancer, sonar, German credit, ionosphere, hear disease datasets as shown in the following the file:
 	{xxx}/rule_generation_{xxx}_rxncm_.py: extract rules using RxNCM and calculate the predefined metric values 
 
 
-3. PBRE to extract rules for light service simulated by the DQN: (the correspondance between the verions in this folder and the light experiments in the paper: 2_v9 -> DQN_v1, 2_v7-> DQN_v2, lstm->DQN_v3)
+3. PBRE extracts rules for light service simulated by the DQN: 
 
 	v3/light_service_structure_{xxx}.py: train the DQNs
 
-	light_services/generate_testing_dataSet_{xxx}.py: generate training or testing dataset
+	light_services/generate_testing_dataSet_{xxx}.py: generate seen or unseen dataset
 
-	light_services/rule_generation_{xxx}.py: generate rules for seen dataset. Since the number of input states for each DQN is small, there is no need to refine rules. (including: light_services/sample_enumerate_abstraction_pedagogical_ing_{xxx}.py and light_services/tree_ing_{xxx}.py)
+	light_services/rule_generation_{xxx}.py: generate rules for seen dataset. Since the number of input states for each DQN is small, there is no need to refine 		rules. (including: light_services/sample_enumerate_abstraction_pedagogical_ing_{xxx}.py and light_services/tree_ing_{xxx}.py)
 
 	evaluate rules:
 

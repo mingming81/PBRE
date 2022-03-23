@@ -11,8 +11,13 @@
 		- execute cel "Check" to load "{xxx}_not_signigicant_F.npy" and check the accuracy on test(unseen) dataset or train(seen) dataset.
 
 
+
+
 2. RxNCM extracts rules for iris, Wisconsin breast cancer, sonar, German credit, ionosphere, hear disease datasets as shown in the following the file:
+
 	{xxx}/rule_generation_{xxx}_rxncm_.py: extract rules using RxNCM and calculate the predefined metric values 
+
+
 
 
 3. PBRE extracts rules for light service simulated by the DQN: 

@@ -12,7 +12,7 @@
 
 
 2. RxNCMto extract rules for iris, Wisconsin breast cancer, sonar, German credit, ionosphere, hear disease datasets contains the following the files:
-	{xxx}/rule_generation_{xxx}_rxncm_.py
+	{xxx}/rule_generation_{xxx}_rxncm_.py: extract rules using RxNCM and calculate the predefined metric values 
 
 
 3. PBRE to extract rules for light service simulated by the DQN: (the correspondance between the verions in this folder and the light experiments in the paper: 2_v9 -> DQN_v1, 2_v7-> DQN_v2, lstm->DQN_v3)

@@ -26,7 +26,7 @@
 
 	light_services/generate_testing_dataSet_{xxx}.py: generate seen or unseen dataset
 
-	light_services/rule_generation_{xxx}.py: generate rules for seen dataset. Since the number of input states for each DQN is small, there is no need to refine 		rules. (including: light_services/sample_enumerate_abstraction_pedagogical_ing_{xxx}.py and light_services/tree_ing_{xxx}.py)
+	light_services/rule_generation_{xxx}.py: generate rules for seen dataset. (including: light_services/sample_enumerate_abstraction_pedagogical_ing_{xxx}.py and light_services/tree_ing_{xxx}.py)
 
 	evaluate rules:
 

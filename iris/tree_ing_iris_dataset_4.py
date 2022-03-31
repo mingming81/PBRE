@@ -12,7 +12,7 @@ import copy
 
 device=torch.device("cuda" if torch.cuda.is_available() else 'cpu')
 
-other_data_name='./../v3/data2'
+other_data_name='./v3/data2'
 
 dataset = pd.read_csv(other_data_name+'/Iris.csv')
 
@@ -72,12 +72,12 @@ def deleteSim(fullSet1):
             
             num_sim=0
             
-            for idx_s in range(1,3):
+            for idx_s in range(1,5):
                 
                 if rule1[idx_s][0,0][0,1]==rule2[idx_s][0,0][0,1] and rule1[idx_s][0,0][0,2]==rule2[idx_s][0,0][0,2]:
                     num_sim+=1
                     
-            if num_sim==2:
+            if num_sim==4:
                 
                 rule1[idx_s][0,1]=max(rule1[idx_s][0,1], rule2[idx_s][0,1])
                 
@@ -127,21 +127,21 @@ def combineRules(fullSet1,idx):
         else:
             if fullSet2[0,0]==None:
                 
-                fullSet2=copy.deepcopy(combined.reshape(-1,3))
+                fullSet2=copy.deepcopy(combined.reshape(-1,5))
                 if toAddIdx[0,0]!=None:
                     for toi in toAddIdx[0]:
                         toAdd=fullSet1[toi]
                         toAdd[idx]=combined[idx]
-                        fullSet2=np.concatenate((fullSet2,toAdd.reshape(-1,3)),axis=0)
+                        fullSet2=np.concatenate((fullSet2,toAdd.reshape(-1,5)),axis=0)
                 
             else:
                 
-                fullSet2=np.concatenate((fullSet2,combined.reshape(-1,3)),axis=0)
+                fullSet2=np.concatenate((fullSet2,combined.reshape(-1,5)),axis=0)
                 if toAddIdx[0,0]!=None:
                     for toi in toAddIdx[0]:
                         toAdd=fullSet1[toi]
                         toAdd[idx]=combined[idx]
-                        fullSet2=np.concatenate((fullSet2,toAdd.reshape(-1,3)),axis=0)
+                        fullSet2=np.concatenate((fullSet2,toAdd.reshape(-1,5)),axis=0)
             
             combined=fullSet1[i]
             toAddIdx=np.full([1,1],None)
@@ -149,23 +149,23 @@ def combineRules(fullSet1,idx):
                 
     if fullSet2[0,0]==None:
                 
-        fullSet2=copy.deepcopy(combined.reshape(-1,3))
+        fullSet2=copy.deepcopy(combined.reshape(-1,5))
         
         if toAddIdx[0,0]!=None:
             for toi in toAddIdx[0]:
                 toAdd=fullSet1[toi]
                 toAdd[idx]=combined[idx]
-                fullSet2=np.concatenate((fullSet2,toAdd.reshape(-1,3)),axis=0)
+                fullSet2=np.concatenate((fullSet2,toAdd.reshape(-1,5)),axis=0)
         
     else:
         
-        fullSet2=np.concatenate((fullSet2,combined.reshape(-1,3)),axis=0)
+        fullSet2=np.concatenate((fullSet2,combined.reshape(-1,5)),axis=0)
         
         if toAddIdx[0,0]!=None:
             for toi in toAddIdx[0]:
                 toAdd=fullSet1[toi]
                 toAdd[idx]=combined[idx]
-                fullSet2=np.concatenate((fullSet2,toAdd.reshape(-1,3)),axis=0)
+                fullSet2=np.concatenate((fullSet2,toAdd.reshape(-1,5)),axis=0)
                 
     fullSet2=deleteSim(fullSet2)
                 

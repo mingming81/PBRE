@@ -1,6 +1,6 @@
 # it in fact extractes rules from the training data, the function of the neural network is to remove
 # insignificant attributes
-# OK
+# 
 # %%
 import torch
 
